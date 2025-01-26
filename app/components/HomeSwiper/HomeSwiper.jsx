@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
+import Image from 'next/image';
 
 import barData from '../../database/barData';
 
@@ -43,7 +44,7 @@ export default function HomeSwiper() {
             barItem.swiper.map((bar, nestedIndex) => (
                 <SwiperSlide className='swiperItemAdaptive' key={`${index}-${nestedIndex}`}>
                     <div className="itemInner">
-                        <img src={bar.img} alt="" className="swiperImg" />
+                        <Image src={bar.img} alt={bar.title} className="swiperImg" width={500} height={300} />
                         <h5 className="swiperManufacturer">{bar.manufacturer}</h5>
                         <p className="swiperTitle">{bar.title}</p>
                         <p className="swiperPrice">{`${bar.price} ₽`}</p>
@@ -56,7 +57,7 @@ export default function HomeSwiper() {
             <SwiperSlide key={index} className="swiperItems">
                 {barItem.swiper.map((bar, nestedIndex) => (
                     <div className='swiperItem' key={nestedIndex}>
-                        <img src={bar.img} alt="" className="swiperImg" />
+                        <Image src={bar.img} alt={bar.title} className="swiperImg" width={500} height={300} />
                         <h5 className="swiperManufacturer">{bar.manufacturer}</h5>
                         <p className="swiperTitle">{bar.title}</p>
                         <p className="swiperPrice">{`${bar.price} ₽`}</p>

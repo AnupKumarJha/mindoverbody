@@ -1,5 +1,6 @@
 import Link from "next/link";
 import localFont from 'next/font/local'
+import Image from 'next/image';
 
 import Benefit from './components/Benefit/Benefit'
 import TrainingAccordions from "./components/TrainingAccordions/TrainingAccordions";
@@ -100,7 +101,7 @@ export default function HomeFitness(){
                     <div className={styles.cardInner}>
                         <div className={styles.cardLeft}>
                             <p className={mainStyles.text}>
-                                We offer a pass card that will be your reliable companion on the path to fitness and health. Here's why our pass card is one of our key advantages:
+                                We offer a pass card that will be your reliable companion on the path to fitness and health. Here&apos;s why our pass card is one of our key advantages:
                             </p>
                             <ol className={styles.cardList}>
                                 <li className={styles.cardItem}>
@@ -127,7 +128,12 @@ export default function HomeFitness(){
                             <Link href='/card'>
                                 <button className={`${styles.cardBtn} ${styles.cardAdaptive}`}>Purchase</button>
                             </Link>
-                            <img src="./fusion-fitness/home-images/card-img.jpg" alt="" />
+                            <Image
+                                src="/path/to/image1.jpg"
+                                alt="Description of the first image"
+                                width={500}
+                                height={300}
+                            />
                         </div>
                     </div>
                 </div>
