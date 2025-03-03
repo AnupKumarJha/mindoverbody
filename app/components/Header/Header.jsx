@@ -19,7 +19,7 @@ export default function Header(){
             <header className={styles.header}>
                 <div className={mainStyles.container}>
                     <nav className={`${styles.nav} ${menu ? styles.menuActive : ''}`}>
-                        <h4 className={styles.logo}>Fusion</h4>
+                        <h4 className={styles.logo}>MINDOVERBODY</h4>
                         <ul className={styles.menu}>
                             <li className={styles.menuItem}>
                                 <Link onClick={onClickMenu} href='/'>Home</Link>
